@@ -276,7 +276,9 @@ Muse and Earable Neuroscience are prospective partners. There is no device sync 
 
 For submission, keep source, tests, documentation and the existing trusted model artifacts. Exclude original datasets, `app/.local/`, any custom data directory, user exports, caches, development screenshots and abandoned experiments. `.gitignore` helps with Git but does not automatically filter a manually created ZIP.
 
-The separate founder's product brief, at most two pages, remains to be prepared and submitted outside the implementation ZIP. The user has deferred the AI-use declaration until final packaging.
+The founder's product brief is prepared as a separate two-page PDF under `output/pdf/` in the assignment workspace. It covers the customer, value, actual CRF use, competition, partner distribution, revenue hypotheses, SWOT and proposed validation pilot. Submit it separately from the implementation ZIP; it is not part of the public app package. The user has deferred the AI-use declaration until final packaging.
+
+The required Moodle upload names are `<studentID>_ass2_notebook.pdf`, `<studentID>_ass2_impl.zip` and `<studentID>_ass2_brief.pdf`. The notebook source uses `<studentID>_ass2_notebook.ipynb`. Preserve module and model filenames so imports and artifact loading still work. The notebook PDF and implementation ZIP require final preparation; the brief does not replace either of them.
 
 ## Free deployment and browser sessions
 
