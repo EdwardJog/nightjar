@@ -1,0 +1,43 @@
+<style>
+/* The guide is a solid card, not a translucent overlay. Explanations put the
+   rest of the screen in the background; Show me restores the working screen. */
+.st-key-guided_demo {
+  background:#fff!important;
+  border:2px solid #c2b3e4!important;
+  box-shadow:0 12px 34px #302e4914;
+}
+.st-key-guide_heading {border-bottom:1px solid #e8e5ee;padding-bottom:8px}
+.st-key-tour_skip {margin-left:0;width:100%}
+.st-key-tour_skip button {
+  background:#fff!important;border:1px solid #b6a8d5!important;
+  color:#514078!important;text-align:center!important;
+  box-shadow:none!important;transform:none!important;
+}
+.st-key-tour_skip button:hover {background:#f2eef9!important;border-color:#6956a5!important}
+html[data-nightjar-tour="explain"] [class*="st-key-page_"],
+html[data-nightjar-tour="explain"] .st-key-topbar,
+html[data-nightjar-tour="explain"] .footnote {
+  opacity:.16!important;pointer-events:none;user-select:none;
+}
+[class*="st-key-page_"],.st-key-topbar {transition:opacity 160ms ease}
+.nj-tour-target {
+  outline:3px solid #8d76bd!important;outline-offset:8px!important;
+  border-radius:12px;
+}
+.st-key-guided_demo h3:focus {outline:none}
+.nj-tour-status {font-size:.9rem;color:#514078;line-height:1.5}
+/* A wide but short window needs the same room as a phone: let the compact
+   action guide scroll away rather than cover the highlighted control. */
+@media(min-width:701px) and (min-height:720px) {
+  html[data-nightjar-tour="act"] [data-testid="stLayoutWrapper"]:has(>.st-key-demo_slot) {
+    position:sticky;top:calc(var(--nj-nav-height, 65px) + 8px);z-index:80;
+    background:var(--paper);padding-bottom:8px;
+  }
+}
+@media(max-width:700px) {
+  .st-key-guided_demo {box-shadow:0 5px 18px #302e4912}
+  .st-key-guide_heading [data-testid="stHorizontalBlock"] {gap:.5rem}
+  .st-key-tour_skip button {min-height:44px}
+  .nj-tour-target {outline-offset:4px}
+}
+</style>

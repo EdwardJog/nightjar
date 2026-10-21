@@ -1,0 +1,87 @@
+<style>
+/* A whole row is rendered together so its tallest card sizes every sibling.
+   Fractional tracks preserve equal widths without hard-coded card heights. */
+.nj-card-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--nj-card-columns, 3), minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  gap: 1rem;
+  margin: 4px 0 15px;
+}
+.nj-card-grid > .card {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+}
+.nj-card-grid .label {
+  line-height: 1.45;
+  margin-bottom: .45rem;
+}
+.nj-card-grid .big-number {
+  font-size: clamp(1.7rem, 2.8vw, 2.25rem);
+  line-height: 1.25;
+  margin-bottom: .55rem;
+}
+.nj-card-grid .small-note {
+  margin-top: auto;
+  line-height: 1.6;
+}
+.nj-card-grid--information .overline {
+  line-height: 1.5;
+}
+.nj-card-grid--information h3 {
+  line-height: 1.4;
+}
+.nj-card-grid--information p {
+  margin-bottom: 0;
+}
+/* Interactive cards keep their native controls. Streamlit's stretch-height
+   containers fill the shared column row while growing with their contents. */
+.st-key-routine_overview,
+.st-key-latest_night,
+[class*="st-key-habit_option_"] {
+  box-sizing: border-box;
+  min-width: 0;
+}
+[class*="st-key-habit_option_"] {
+  background: #fff;
+  border-color: var(--line);
+  border-radius: 17px;
+  padding: 22px 24px;
+}
+[class*="st-key-habit_option_"] .nj-card-grid {
+  margin: 0;
+  grid-auto-rows: auto;
+}
+[class*="st-key-habit_option_"] .nj-info-card {
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+[class*="st-key-habit_option_"] > :last-child {
+  margin-top: auto;
+}
+@media (max-width: 760px) {
+  .nj-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .75rem;
+  }
+  .nj-card-grid > .card {
+    padding: 18px;
+  }
+  [class*="st-key-habit_option_"] {
+    padding: 18px;
+  }
+  [class*="st-key-habit_option_"] .nj-info-card {
+    padding: 0;
+  }
+}
+</style>
