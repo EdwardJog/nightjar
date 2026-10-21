@@ -1,6 +1,6 @@
 # Nightjar: Personal Sleep Experiment Companion
 
-Status: free hosted-session mode is implemented. All 151 tests passed, plus five checks from the clean deployment package. Browser isolation and Linux dependency resolution were checked. GitHub sign-in, publication and the live Linux deployment remain pending. The README records verification details.
+Status: free hosted-session mode is implemented. All 151 tests passed, plus five checks from the clean deployment package. Browser isolation and Linux dependency resolution were checked. The public repository is https://github.com/EdwardJog/nightjar; the live Linux deployment remains pending. The README records verification details.
 
 ## Product purpose
 
@@ -239,4 +239,4 @@ Reference: FIT5149 S2 2026 Assessment 2, Sections 2.3, 4 and 5, and Appendix H. 
 
 The local app keeps automatic SQLite saving. The hosted demonstration uses `app/cloud_entry.py` and separate temporary Streamlit session state, so visitors do not share participant spaces. Uploaded CSVs are processed on the hosting server. Refreshing, losing the session or restarting the server may clear progress; download a routine backup in Settings to keep it. No account, paid database or API key is required. This is a hosted prototype, not durable consumer accounts.
 
-Run `python app/prepare_deployment.py` from the assignment root to build the allowlisted package in `tmp/deployment/nightjar`. Only that folder is published to the public GitHub repository `nightjar`. Original datasets, notebook, experiments, databases and caches are excluded. See [deployment instructions](DEPLOYMENT.md) for Python version, entry point, publishing and updating. Publication and the Linux cloud build remain unverified until the live service is checked.
+Run `python app/prepare_deployment.py` from the assignment root to build the allowlisted package in `tmp/deployment/nightjar`. Only that folder is published to the public GitHub repository `nightjar`. Original datasets, notebook, experiments, databases and caches are excluded. See [deployment instructions](DEPLOYMENT.md) for Python version, entry point, publishing and updating. The GitHub package is published; the Linux cloud build remains unverified until the live service is checked.

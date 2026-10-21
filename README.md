@@ -2,6 +2,8 @@
 
 **Find a sleep routine worth keeping.** A guided sleep experiment companion using a saved MLP-CRF, with an interactive fictional walkthrough and real inference from compatible EEG feature CSVs.
 
+Source: [EdwardJog/nightjar](https://github.com/EdwardJog/nightjar).
+
 ## Hosted demonstration
 
 This repository is the small deployment package. The full assignment notebook, original datasets, personal database and training caches are excluded. The hosted app starts with **Explore the demo** or **Create my space**. A marker can explore the demo without uploading a file. For real inference, upload the assignment's compatible feature CSV through **Log a night** and choose a participant and recording. Raw EEG files are not supported.
