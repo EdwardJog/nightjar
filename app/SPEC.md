@@ -231,11 +231,11 @@ Sources checked on 20 October 2026. They support design choices and general guid
 | No embedded datasets | Generated, labelled demo examples and user-supplied real recordings. |
 | Product brief, at most two pages | Separate PDF covering customer, problem, value, revenue hypothesis, SWOT, prospective partners and model use. |
 
-The two-page founder's brief is prepared separately under `output/pdf/` in the assignment workspace. Its investment proposition is a focused device-partner pilot: validate compatibility, measure decision usefulness and repeat use, and test paid demand before expansion. Subscription revenue is a hypothesis; occasional use may favour a paid programme. It presents generated demo outcomes as illustrative and software verification separately from consumer or clinical validation.
+The two-page founder's brief is prepared separately in the assignment root. Its investment proposition is a focused device-partner pilot: validate compatibility, measure decision usefulness and repeat use, and test paid demand before expansion. Subscription revenue is a hypothesis; occasional use may favour a paid programme. It presents generated demo outcomes as illustrative and software verification separately from consumer or clinical validation.
 
 The three-minute demonstration should show the value through the demo, then one real upload and inference path, its understandable output and saved return visit. Assignment recordings do not document a habit intervention; any demonstration routine assignments for them must be labelled illustrative.
 
-Reference: FIT5149 S2 2026 Assessment 2, Sections 2.3, 4 and 5, and Appendix H. The local brief at `../tmp/reference_documents/FIT5149_S2_2026_Assessment_2.pdf` is a development reference, not a runtime dependency. Completion and verification claims belong in the README only after those checks have run.
+Reference: FIT5149 S2 2026 Assessment 2, Sections 2.3, 4 and 5, and Appendix H. The assessment specification is a development reference, not a runtime dependency or bundled dataset. Completion and verification claims belong in the README only after those checks have run.
 
 ## Free deployment and browser sessions
 

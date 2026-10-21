@@ -276,9 +276,9 @@ Muse and Earable Neuroscience are prospective partners. There is no device sync 
 
 For submission, keep source, tests, documentation and the existing trusted model artifacts. Exclude original datasets, `app/.local/`, any custom data directory, user exports, caches, development screenshots and abandoned experiments. `.gitignore` helps with Git but does not automatically filter a manually created ZIP.
 
-The founder's product brief is prepared as a separate two-page PDF under `output/pdf/` in the assignment workspace. It covers the customer, value, actual CRF use, competition, partner distribution, revenue hypotheses, SWOT and proposed validation pilot. Submit it separately from the implementation ZIP; it is not part of the public app package. The user has deferred the AI-use declaration until final packaging.
+The founder's product brief is a separate two-page PDF in the assignment root. It covers the customer, value, actual CRF use, competition, partner distribution, revenue hypotheses, SWOT and proposed validation pilot. Submit it separately from the implementation ZIP; it is not part of the public app package. Completed AI forms, `ai_use.txt` and the chat-history PDF accompany the assignment source in the implementation ZIP.
 
-The required Moodle upload names are `<studentID>_ass2_notebook.pdf`, `<studentID>_ass2_impl.zip` and `<studentID>_ass2_brief.pdf`. The notebook source uses `<studentID>_ass2_notebook.ipynb`. Preserve module and model filenames so imports and artifact loading still work. The notebook PDF and implementation ZIP require final preparation; the brief does not replace either of them.
+The required Moodle upload names are `<studentID>_ass2_notebook.pdf`, `<studentID>_ass2_impl.zip` and `<studentID>_ass2_brief.pdf`. The notebook source uses `<studentID>_ass2_notebook.ipynb`. Preserve module and model filenames so imports and artifact loading still work. The notebook PDF and product brief must be uploaded separately, outside the implementation ZIP. Original `train.csv` and `test.csv` are excluded: restore your supplied copies to the project root before rerunning the research notebook. The app's guided demo needs neither dataset; uploaded compatible features are processed with the supplied saved model.
 
 ## Free deployment and browser sessions
 
@@ -287,6 +287,8 @@ The local app keeps automatic SQLite saving. The hosted demonstration uses `app/
 Run `python app/prepare_deployment.py` from the assignment root to build the allowlisted package in `tmp/deployment/nightjar`. Only that folder is published to the public GitHub repository `nightjar`. Original datasets, notebook, experiments, databases and caches are excluded. See [deployment instructions](DEPLOYMENT.md) for Python version, entry point, publishing and updating. The app is deployed and verified at https://nightjar-sleep.streamlit.app/.
 
 ### Deployment verification
+
+Final submission recheck on 21 October 2026: all 151 app tests passed in 155.54 seconds. All 39 root, app and test Python files also passed syntax checks. This check used the unchanged application code and saved inference artifacts.
 
 On 21 October 2026, all 151 tests passed (199.71 seconds), including isolated hosted visitors, local storage regression, demo flows and real inference with generated fixtures. The clean deployment package separately passed five inference and cloud-interface checks (18.40 seconds). Both test processes exited successfully; Windows sandbox temporary-directory cleanup emitted a permission warning after completion. Linux x86-64 / Python 3.13 dependency resolution succeeded using CPU-only PyTorch. Browser checks confirmed that a second tab starts empty while the first retains its fictional test profile, and that hosted saving notices render correctly. No personal SQLite file was used by the hosted preview.
 

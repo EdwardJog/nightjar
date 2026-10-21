@@ -161,9 +161,9 @@ Submit source, tests, README, SPEC and AGENTS under `app/`. The README must docu
 
 Exclude original datasets, private data, databases, caches and abandoned code. The founder's product brief is a separate PDF of at most two pages, covering the problem, customer, value, SWOT and model use; do not place it inside the implementation ZIP.
 
-The prepared brief lives under `output/pdf/` in the assignment workspace, outside the public deployment package. Use `<studentID>_ass2_brief.pdf`, `<studentID>_ass2_notebook.pdf` and `<studentID>_ass2_impl.zip` for the three separate Moodle uploads. Keep module and model artifact names unchanged. Any brief revision must retain clear distinctions between implemented features, fictional demo results and proposed commercial validation.
+The prepared brief lives in the assignment root, outside the public deployment package. Use `<studentID>_ass2_brief.pdf`, `<studentID>_ass2_notebook.pdf` and `<studentID>_ass2_impl.zip` for the three separate Moodle uploads. Keep module and model artifact names unchanged. Any brief revision must retain clear distinctions between implemented features, fictional demo results and proposed commercial validation.
 
-The user has deferred the AI-use declaration until final packaging. Keep it accurate, and keep the app understandable enough for the student to explain the generated code and model integration.
+The user has completed the AI-use forms. Preserve the wording of `ai_use.txt` exactly as supplied in the notebook declaration; keep the completed forms and chat-history PDF with the implementation submission. Keep the app understandable enough for the student to explain the generated code and model integration.
 
 The redesign is complete only after relevant acceptance checks, a fresh-process launch and the consumer browser flow have been verified. Update implementation status from evidence rather than intention.
 
