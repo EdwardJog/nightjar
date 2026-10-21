@@ -2,6 +2,10 @@
 
 **Find a sleep routine worth keeping.**
 
+[Open the live app](https://nightjar-sleep.streamlit.app/) · [GitHub source](https://github.com/EdwardJog/nightjar)
+
+For marking, open the live app and choose **Explore the demo**. No installation is needed. The local launch below remains available.
+
 Nightjar is a sleep experiment companion for people who already own an EEG recorder. It guides one manageable routine change, estimates sleep from compatible recordings with the saved Part I MLP-CRF, and compares the results with how the person felt in the morning.
 
 The app opens with a welcome screen and guided demo. **Today** is your daily dashboard; **Night log** is your recording history. Open routine progress from Today and individual nights from the log. Settings stays separate from the daily flow. Local use saves automatically on this computer; the hosted demonstration keeps progress only in the current browser session.
@@ -278,10 +282,10 @@ The separate founder's product brief, at most two pages, remains to be prepared 
 
 The local app keeps automatic SQLite saving. The hosted demonstration uses `app/cloud_entry.py` and separate temporary Streamlit session state, so visitors do not share participant spaces. Uploaded CSVs are processed on the hosting server. Refreshing, losing the session or restarting the server may clear progress; download a routine backup in Settings to keep it. No account, paid database or API key is required. This is a hosted prototype, not durable consumer accounts.
 
-Run `python app/prepare_deployment.py` from the assignment root to build the allowlisted package in `tmp/deployment/nightjar`. Only that folder is published to the public GitHub repository `nightjar`. Original datasets, notebook, experiments, databases and caches are excluded. See [deployment instructions](DEPLOYMENT.md) for Python version, entry point, publishing and updating. The GitHub package is published; the Linux cloud build remains unverified until the live service is checked.
+Run `python app/prepare_deployment.py` from the assignment root to build the allowlisted package in `tmp/deployment/nightjar`. Only that folder is published to the public GitHub repository `nightjar`. Original datasets, notebook, experiments, databases and caches are excluded. See [deployment instructions](DEPLOYMENT.md) for Python version, entry point, publishing and updating. The app is deployed and verified at https://nightjar-sleep.streamlit.app/.
 
 ### Deployment verification
 
 On 21 October 2026, all 151 tests passed (199.71 seconds), including isolated hosted visitors, local storage regression, demo flows and real inference with generated fixtures. The clean deployment package separately passed five inference and cloud-interface checks (18.40 seconds). Both test processes exited successfully; Windows sandbox temporary-directory cleanup emitted a permission warning after completion. Linux x86-64 / Python 3.13 dependency resolution succeeded using CPU-only PyTorch. Browser checks confirmed that a second tab starts empty while the first retains its fictional test profile, and that hosted saving notices render correctly. No personal SQLite file was used by the hosted preview.
 
-The app-only source is published at https://github.com/EdwardJog/nightjar. The actual Linux deployment and live public URL still need verification; dependency resolution alone is not a cloud runtime test.
+The app-only source is published at https://github.com/EdwardJog/nightjar. Streamlit deployed successfully on Python 3.13.16 with torch 2.14.1+cpu. The live app completed setup, routine creation, upload and actual CRF inference. All 21 exported predictions for two generated QA recordings matched the local model exactly. A second visitor started with no personal workspace and opened the guided demo; the completed Alex dashboard also rendered. These are software checks, not clinical validation or a concurrent-load benchmark.

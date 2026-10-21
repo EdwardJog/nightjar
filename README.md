@@ -1,5 +1,7 @@
 # Nightjar
 
+[**Open Nightjar**](https://nightjar-sleep.streamlit.app/)
+
 **Find a sleep routine worth keeping.** A guided sleep experiment companion using a saved MLP-CRF, with an interactive fictional walkthrough and real inference from compatible EEG feature CSVs.
 
 Source: [EdwardJog/nightjar](https://github.com/EdwardJog/nightjar).
@@ -20,7 +22,7 @@ This is a demonstration without accounts or durable cloud storage. It does not p
 4. Deploy, wait for the build, then verify the interactive demo and one compatible upload. Open a second browser session to confirm it starts without the first visitor's personal space.
 5. Put the resulting `https://…streamlit.app` link into the assignment handover. Keep the source ZIP and required assignment documents as well.
 
-Dependency versions match the local scientific stack; PyTorch uses the official CPU wheel to avoid GPU packages. Linux build and resource use must be confirmed on the actual hosted instance. Installation does not train a model.
+Dependency versions match the local scientific stack; PyTorch uses the official CPU wheel to avoid GPU packages. The live Linux build was verified on Python 3.13.16. Real CRF inference on 21 generated QA epochs matched the local model exactly; separate browser sessions and the demo were checked. This does not establish capacity under heavy concurrent use. Installation does not train a model.
 
 ## Run this deployment package locally
 
